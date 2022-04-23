@@ -3,6 +3,9 @@ Python based command line tool to calculate XIRR from Zerodha funds statement
 
 This takes input as the Zerodha funds statement as input to calculate XIRR. Along with that it takes the date and portfolio value for which the XIRR needs to be calculated
 
+##Calculation
+It takes voucher comment Bank Receipts as negative cash flow and withdrawals as positive cashflow. So all charges are taken into account. Only dividends are not taken in the calculation. If you want you can add them manually in the ledger by keeping voucher column as 'Bank Payments' and adding the correct date and amount.
+
 ## How to get Funds Statement from Zerodha
 1. Open console.zerodha.com
 2. Click on Funds in the header banner to reveal the dropdown manner
