@@ -46,7 +46,7 @@ def readLedger(filename):
     dateColumns = ['posting_date']
     return pd.read_csv(filename, sep=',', header = 0, names = headers, dtype = dataType, parse_dates = dateColumns, dayfirst=True)
 
-ledgerData = readLedger("ledger-JP0955_working_sample.csv")
+ledgerData = readLedger("ledger.csv")           //provide ledger name here
 dateLedger = list(ledgerData["posting_date"])
 voucherData = ledgerData['voucher_type'].tolist()
 debitData = ledgerData['debit'].tolist()
