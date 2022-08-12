@@ -26,7 +26,7 @@ def readLedger(filename):
     headers = ['particulars', 'posting_date', 'cost_center', 'voucher_type', 'debit', 'credit', 'net_balance']
     dataType = {'particulars': 'str', 'posting_date': 'str', 'cost_center': 'str', 'voucher_type': 'str', 'debit': 'float', 'credit': 'float', 'net_balance': 'float'}
     dateColumns = ['posting_date']
-    return pd.read_csv(filename, sep=',', header = 0, names = headers, dtype = dataType, parse_dates = dateColumns, dayfirst=True)
+    return pd.read_csv(filename, sep=',', header = 0, names = headers, dtype = dataType, parse_dates = dateColumns, dayfirst=True).dropna()
 
 #take inputs from user
 endDate = pd.to_datetime(input("Enter Date for end of investment period in dd-mm-yyyy format: "), format= '%d-%m-%Y')
